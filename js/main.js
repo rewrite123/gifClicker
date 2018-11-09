@@ -1,3 +1,4 @@
+/* For the js masochists, this is how we avoid using fetch or JQs ajax. */
 var getJSON = function(url, callback) {
 	var xhr = new XMLHttpRequest();
 	xhr.open('GET', url, true);
@@ -12,6 +13,8 @@ var getJSON = function(url, callback) {
 	};
 	xhr.send();
 };
+
+/* This actually does the api call, and adds the images associated. */
 function run(searchVal, searchLimit){
   var req = getJSON("http://api.giphy.com/v1/gifs/search?q=" + searchVal + "&api_key=dc6zaTOxFJmzC&limit=" + searchLimit, function(err, res){
 	if(err != null){
@@ -31,6 +34,7 @@ function run(searchVal, searchLimit){
   });
 }
 
+/* Changes the source of an image that was added to the dom when clicked. */
 function gifClicked(){
 	if(this.src == this.still){
 		this.src = this.animated;
@@ -39,6 +43,7 @@ function gifClicked(){
 	}
 }
 
+/* Adds a button to the buttonContainer. */
 function addButton(){
 	var textContent = arguments[0] || document.getElementById("searchBar").value;
 	if(textContent.trim() != ""){
@@ -59,8 +64,10 @@ function addButton(){
 	}
 }
 
+/* Bad practice I know, but things were getting annoying, so you are just going to have to live with the fact that you have to press F12 to open the console. ¯\_(ツ)_/¯ */
 document.addEventListener("contextmenu", event => event.preventDefault());
 
+/* Adds the pre-existing buttons to the webpage. */
 addButton("Ben Shapiro Thug Life", 10);
 addButton("Meme review", 21);
 addButton("freedom intensifies", 7);
