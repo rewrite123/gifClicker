@@ -1,0 +1,69 @@
+body{
+	background-color: #0E0004;
+	font-family: "Lucida Sans Unicode";
+}
+input{
+	background-color: #054A91;
+	border-color: #054A91;
+	color: #FCFCFC;
+	min-width: 150px;
+	min-height: 20px;
+}
+button{
+	font-size: 16px;
+	min-width: 75px;
+	min-height: 25px;
+	margin: 5px;
+	background-color: #7FB069;
+	border-color: #7FB069;
+	color: #0E0004;
+}
+img{
+	margin: 10px;
+	display: inline-block;
+}
+
+.mainContainer{
+	margin-left: auto;
+	margin-right: auto;
+	width: 85%;
+	font-size: 18px;
+	color: #FCFCFC;
+}
+.heading{
+	text-align: center;
+	font-size: 48px;
+}
+.searchBarContainer{
+	
+}
+.searchBarContainer button{
+	margin-left: 0px;
+}
+.searchBar{
+	
+}
+.buttonContainer{
+	text-align: center;
+}
+.buttonContainer button{
+	font-size: 18px;
+	min-width: 100px;
+	min-height: 30px;
+	margin: 5px;
+	background-color: #7FB069;
+	border-color: #7FB069;
+	color: #0E0004;
+}
+.gifContainer{
+	text-align: center;
+}
+@media screen and (max-width: 850px){
+	img{
+		max-height: 250px;
+		max-width: 250px;
+	}
+	.searchBarContainer{
+		margin-bottom: 20px;
+	}
+}

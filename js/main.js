@@ -44,7 +44,6 @@ function addButton(){
 	if(textContent.trim() != ""){
 		var container = document.getElementById("buttonContainer");
 		var buttonToAdd = document.createElement("button");
-		buttonToAdd.addEventListener("contextmenu", event => event.preventDefault());
 		buttonToAdd.searchVal = arguments[0] || document.getElementById("searchBar").value;
 		buttonToAdd.searchLimit = arguments[1] || ((Math.floor(document.getElementById("numberOfGifs").value) != "" || Math.floor(document.getElementById("numberOfGifs").value) > 0) ? Math.floor(document.getElementById("numberOfGifs").value) : 25);
 		buttonToAdd.textContent = textContent.trim() + " (" + buttonToAdd.searchLimit + ")";
@@ -59,6 +58,8 @@ function addButton(){
 		container.appendChild(buttonToAdd);
 	}
 }
+
+document.addEventListener("contextmenu", event => event.preventDefault());
 
 addButton("Ben Shapiro Thug Life", 10);
 addButton("Meme review", 21);
